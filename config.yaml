@@ -2,7 +2,7 @@ name: "HA Remote Connectors"
 slug: "ha_remote_connectors"
 description: "Outbound tunnel client for HA Remote VPSs"
 version: "0.2.8"
-url: "https://ctechmedia.de"
+url: "https://github.com/charlyschulte/ha-remote"
 arch:
   - aarch64
   - amd64
