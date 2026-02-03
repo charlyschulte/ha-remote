@@ -46,7 +46,7 @@ function getAddonVersion(): string {
 
 const ADDON_VERSION = getAddonVersion();
 
-const API_BASE_URL = "http://api.test.ctechserver.de";
+const API_BASE_URL = "https://api.test.ctechserver.de";
 const EXTRA_ALLOWED_IPS = "172.21.0.0/16";
 const WG_DIR = "/data/wireguard";
 const WG_PRIVATE_KEY_FILE = path.join(WG_DIR, "client.key");
