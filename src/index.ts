@@ -120,9 +120,18 @@ async function provisionWireguard(
     })
   });
 
-  const json = (await r.json().catch(() => ({}))) as WireguardProvisionResponse;
+  const rawText = await r.text().catch(() => "");
+  const json = ((): WireguardProvisionResponse => {
+    if (!rawText) return {};
+    try {
+      return JSON.parse(rawText) as WireguardProvisionResponse;
+    } catch {
+      return {};
+    }
+  })();
   if (!r.ok) {
-    const msg = json?.error || json?.message || "wireguard_provision_failed";
+    const msg = json?.error || json?.message || rawText || "wireguard_provision_failed";
+    log.error(`[ha-remote] wireguard provisioning failed (status ${r.status})`, msg);
     throw new Error(msg);
   }
 
