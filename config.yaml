@@ -1,0 +1,39 @@
+name: "HA Remote Connectors"
+slug: "ha_remote_connectors"
+description: "Outbound tunnel client for HA Remote VPSs"
+version: "0.2.8"
+url: "https://ctechmedia.de"
+arch:
+  - aarch64
+  - amd64
+  - armv7
+  - i386
+startup: services
+boot: auto
+init: false
+ingress: false
+
+privileged:
+  - NET_ADMIN
+  - SYS_MODULE
+
+sysctls:
+  net.ipv4.ip_forward=1
+  net.ipv4.conf.all.src_valid_mark=1
+  net.ipv6.conf.all.disable_ipv6=0
+  net.ipv6.conf.all.forwarding=1
+  net.ipv6.conf.default.forwarding=1
+
+options:
+  token: ""
+  log_level: info
+
+schema:
+  token: str
+  log_level: list(info|debug)
+
+# Allows reaching Home Assistant via the internal DNS name:
+host_network: false
+
+# Add-on can access the HA API/network inside supervisor network
+# (This is typical for add-ons; the hostname 'homeassistant' resolves.)
