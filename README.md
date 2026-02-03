@@ -1,6 +1,6 @@
 # HA Remote Add-ons
 
-[![Open your Home Assistant instance and open the ingress URL of an add-on.](https://my.home-assistant.io/badges/supervisor_ingress.svg)](https://my.home-assistant.io/redirect/supervisor_ingress/?addon=https%3A%2F%2Fgithub.com%2Fcharlyschulte%2Fha-remote)
+[![Open your Home Assistant instance and show the dashboard of an add-on.](https://my.home-assistant.io/badges/supervisor_addon.svg)](https://my.home-assistant.io/redirect/supervisor_addon/?repository_url=https%3A%2F%2Fgithub.com%2Fcharlyschulte%2Fha-remote&addon=940f05e1_ha_remote_connectors)
 
 ## Install with one click
 1. Click the button above (or open the link in a browser where you are signed into your Home Assistant instance).
