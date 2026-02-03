@@ -13,10 +13,5 @@
 3. Paste this URL and click **Add**:
    - https://github.com/charlyschulte/ha-remote
 
-## Updating the add-on
-- Bump the `version` in [config.yaml](config.yaml).
-- Commit and push to GitHub.
-- Home Assistant will show the update automatically in the Add-on Store.
-
 ## Notes
 - If the GitHub URL or maintainer changes, update [repository.json](repository.json) accordingly.
